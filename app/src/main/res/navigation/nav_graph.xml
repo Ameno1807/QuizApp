@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.example.quizapp.ui.FragmentQuiz"
+        android:label="QuizFragment">
+        <action
+            android:id="@+id/action_quizFragment_self2"
+            app:destination="@id/quizFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_quizFragment_to_resultFragment"
+            app:destination="@id/resultFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_quizFragment_self"
+            app:destination="@id/quizFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_quizFragment_self3"
+            app:destination="@id/quizFragment" />
+        <argument
+            android:name="answer"
+            app:argType="integer" />
+        <argument
+            android:name="questions"
+            app:argType="com.example.quizapp.model.QuizModel[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.quizapp.ui.FragmentResultQuiz"
+        android:label="fragment_result">
+        <action
+            android:id="@+id/action_resultFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <argument
+            android:name="questions"
+            app:argType="com.example.quizapp.model.QuizModel[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.quizapp.ui.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+    </fragment>
+</navigation>

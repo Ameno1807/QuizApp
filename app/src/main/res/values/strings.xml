@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="your_score">YOUR SCORE</string>
+    <string name="_3_5">3/5</string>
+    <string name="share">Share</string>
+    <string name="Back">Exit</string>
+    <string name="button">Restart</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="welcome_to_my_quiz">Welcome to my Quiz</string>
+    <string name="start">Start</string>
+</resources>
